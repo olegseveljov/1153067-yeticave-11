@@ -28,7 +28,9 @@ $user_name = 'Oleg';
 
         <nav class="user-menu">
 
-            <?php if ($is_auth == 1)
+            <?php
+
+            if ($is_auth) = rand(0, 1);
 
          <div class="user-menu__logged">
            <p>$user_name</p>
@@ -36,8 +38,6 @@ $user_name = 'Oleg';
            <a class="user-menu__logout" href="#">Выход</a>
          </div>
 
-
-            elseif ($is_auth == "1"):
 
             <ul class="user-menu__list">
                 <li class="user-menu__item <?php if == 0): ?>current<?php endif ?>">
