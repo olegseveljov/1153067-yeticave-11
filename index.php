@@ -29,9 +29,6 @@ $user_name = 'Oleg';
         <nav class="user-menu">
 
             <?php
-            $is_auth = rand(0, 1);
-            $user_name = 'Oleg';
-
             if ($is_auth == 1) {
 
             <div class="user-menu__logged">
