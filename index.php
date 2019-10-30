@@ -34,7 +34,7 @@ $user_name = 'Oleg';
                 <a class="user-menu__bets" href="pages/my-bets.html">Мои ставки</a>
                 <a class="user-menu__logout" href="#">Выход</a>
             </div>
-            <?php elseif ($is_auth == "1"): ?>
+            <?php else ($is_auth == "1"): ?>
 
             <ul class="user-menu__list">
                 <li class="user-menu__item">
