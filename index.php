@@ -32,7 +32,7 @@ $user_name = 'Oleg';
             $is_auth = rand(0, 1);
             $user_name = 'Oleg';
 
-            if ($is_auth == rand 1) {
+            if ($is_auth == 1) {
 
             <div class="user-menu__logged">
                 <p>$user_name</p>
