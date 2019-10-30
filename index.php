@@ -45,7 +45,7 @@ $user_name = 'Oleg';
                     <a href="#">Вход</a>
                 </li>
             </ul>
-            ?>
+
         </nav>
     </div>
 </header>
