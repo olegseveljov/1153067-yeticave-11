@@ -143,3 +143,4 @@ $user_name = 'Oleg';
 <script src="script.js"></script>
 </body>
 </html>
+<?php endif; ?>
