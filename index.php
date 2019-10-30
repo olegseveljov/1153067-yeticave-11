@@ -28,7 +28,7 @@ $user_name = 'Oleg';
 
         <nav class="user-menu">
 
-            <?php
+
 
             if ($is_auth) = rand(0, 1);
 
