@@ -28,8 +28,7 @@ $user_name = 'Oleg';
 
         <nav class="user-menu">
 
-            <?php
-            if ($is_auth == 1)
+            <?php if ($is_auth == 1)
 
             <div class="user-menu__logged">
                 <p>$user_name</p>
@@ -48,7 +47,6 @@ $user_name = 'Oleg';
                     <a href="#">Вход</a>
                 </li>
             </ul>
-            ?>
         </nav>
     </div>
 </header>
