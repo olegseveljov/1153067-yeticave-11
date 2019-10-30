@@ -34,6 +34,17 @@ $user_name = 'Oleg';
                 <a class="user-menu__logout" href="#">Выход</a>
             </div>
             <?php endif ?>
+            <?php if ($is_auth == 0): ?>
+            <ul class="user-menu__list">
+                <li class="user-menu__item">
+                    <a href="#">Регистрация</a>
+                </li>
+                <li class="user-menu__item">
+                    <a href="#">Вход</a>
+                </li>
+            </ul>
+            <?php endif ?>
+
         </nav>
     </div>
 </header>
