@@ -31,7 +31,7 @@ $user_name = 'Oleg';
 
             $is_auth = rand(0, 1);
 
-            if ($is_auth == rand(0, 1) {
+            if ($is_auth == rand 1 {
             <div class="user-menu__logged">
                 <p>#user_name#</p>
                 <a class="user-menu__bets" href="pages/my-bets.html">Мои ставки</a>
