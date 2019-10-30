@@ -28,8 +28,6 @@ $user_name = 'Oleg';
 
         <nav class="user-menu">
 
-
-
             if ($is_auth) = rand(0, 1);
 
          <div class="user-menu__logged">
@@ -40,7 +38,7 @@ $user_name = 'Oleg';
 
 
             <ul class="user-menu__list">
-                <li class="user-menu__item <?php if == 0): ?>current<?php endif ?>">
+                <li class="user-menu__item <?php if == 0): ?>is_auth<?php endif ?>">
                     <a href="#">Регистрация</a>
                 </li>
                 <li class="user-menu__item">
