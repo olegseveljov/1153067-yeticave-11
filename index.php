@@ -31,16 +31,16 @@ $user_name = 'Oleg';
             <?php if ($is_auth == 1)
 
          <div class="user-menu__logged">
-    <p>$user_name</p>
-    <a class="user-menu__bets" href="pages/my-bets.html">Мои ставки</a>
-    <a class="user-menu__logout" href="#">Выход</a>
-  </div>
+           <p>$user_name</p>
+           <a class="user-menu__bets" href="pages/my-bets.html">Мои ставки</a>
+           <a class="user-menu__logout" href="#">Выход</a>
+         </div>
 
 
             elseif ($is_auth == "1"):
 
             <ul class="user-menu__list">
-                <li class="user-menu__item">
+                <li class="user-menu__item <?php if == 0): ?>current<?php endif ?>">
                     <a href="#">Регистрация</a>
                 </li>
                 <li class="user-menu__item">
