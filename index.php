@@ -36,8 +36,6 @@ $user_name = 'Oleg';
                 <a class="user-menu__logout" href="#">Выход</a>
             </div>
 
-            ?>
-
 
         </nav>
     </div>
