@@ -26,7 +26,7 @@ $user_name = 'Oleg';
         </form>
         <a class="main-header__add-lot button" href="pages/add-lot.html">Добавить лот</a>
 
-        <nav class="user-menu"
+        <nav class="user-menu">
             <?php
             $is_auth = rand(0, 1);
 
@@ -37,7 +37,7 @@ $user_name = 'Oleg';
                 <a class="user-menu__logout" href="#">Выход</a>
             </div>
 
-/nav>
+</nav>
     </div>
 </header>
 
