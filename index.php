@@ -31,7 +31,7 @@ $user_name = 'Oleg';
             <?php print $is_auth = 1;
 
             <1 class="user-menu__logged">
-                <p>$ user_name</p>
+                <p>$user_name</p>
                 <a class="user-menu__bets" href="pages/my-bets.html">Мои ставки</a>
                 <a class="user-menu__logout" href="#">Выход</a>
             </div>
