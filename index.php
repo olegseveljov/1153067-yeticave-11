@@ -4,51 +4,48 @@ $is_auth = rand(0, 1);
 $user_name = 'Oleg';
 
 $categories = [
-    "Доски и лыжи","Крепления","Ботинки","Одежда","Инструменты","Разное"
+    "Доски и лыжи", "Крепления", "Ботинки", "Одежда", "Инструменты", "Разное"
 ];
 
-$gif = [
+$items = [
     [
-        'gif' => 'img/lot-1.jpg',
+        'image' => 'img/lot-1.jpg',
         'title' => '2014 Rossignol District Snowboard',
         'categories' => 'Доски и лыжи',
         'price' => '10999',
     ],
     [
-        'gif' => 'img/lot-2.jpg',
+        'image' => 'img/lot-2.jpg',
         'title' => 'DC Ply Mens 2016/2017 Snowboard',
-        'categories' => 'Доски и лыжи',
+        'categories' => 'Доска и лыжи',
         'price' => '159999',
     ],
     [
-        'gif' => 'img/lot-3.jpg',
+        'image' => 'img/lot-3.jpg',
         'title' => 'Крепления Union Contact Pro 2015 года размер L/XL',
         'categories' => 'Крепления',
         'price' => '8000',
     ],
     [
-        'gif' => 'img/lot-4.jpg',
+        'image' => 'img/lot-4.jpg',
         'title' => 'Ботинки для сноуборда DC Mutiny Charocal',
         'categories' => 'Ботинки',
         'price' => '10999',
     ],
     [
-        'gif' => 'img/lot-5.jpg',
+        'image' => 'img/lot-5.jpg',
         'title' => 'Куртка для сноуборда DC Mutiny Charocal',
         'categories' => 'Одежда',
         'price' => '7500',
     ],
     [
-        'gif' => 'img/lot-6.jpg',
+        'image' => 'img/lot-6.jpg',
         'title' => 'Маска Oakley Canopy',
         'categories' => 'Разное',
         'price' => '5400',
     ],
 ];
-//foreach ($gif as $key => $value) {
-//    print ($key . "<br>");
-//    print ($value . "<br><br>");
-//}
+
 ?>
 
 <!DOCTYPE html>
@@ -113,15 +110,13 @@ $gif = [
             <h2>Открытые лоты</h2>
         </div>
         <ul class="lots__list">
-            <?php //var_dump($gif); ?>
+            <?php //var_dump($image); ?>
 
-            <!--заполните этот список из массива с товарами-->
-
-            <?php foreach ($gif as $key => $item): ?>
+            <?php foreach ($items as $key => $item): ?>
 
             <li class="lots__item lot">
                 <div class="lot__image">
-                    <img src="<?= $item['gif']; ?>" width="350" height="260" alt="<?= $item['title']; ?>">
+                    <img src="<?= $item['image']; ?>" width="350" height="260" alt="<?= $item['title']; ?>">
                 </div>
                 <div class="lot__info">
                     <span class="lot__category"><?= $item['categories']; ?></span>
@@ -146,10 +141,9 @@ $gif = [
 <footer class="main-footer">
     <nav class="nav">
         <ul class="nav__list container">
-            <!--заполните этот список из массива категорий-->
             <?php foreach ($categories as $key): ?>
             <li class="nav__item">
-                <a href="?pages/all-lots.html"><?= $key; ?></a>
+                <a href="pages/all-lots.html"><?= $key; ?></a>
             </li>
             <?php endforeach; ?>
         </ul>
