@@ -46,6 +46,21 @@ $items = [
     ],
 ];
 
+function ($items, $values)
+{
+ceil($values);
+
+$values = 'price';
+    if ($values < 1000) {
+        $values = $values;
+    }
+    if ($values >= 1000){
+        number_format($values, 0," " , " ", + ₽);
+
+            Return $items;
+    }
+
+}
 ?>
 
 <!DOCTYPE html>
