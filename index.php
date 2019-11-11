@@ -46,27 +46,21 @@ $items = [
     ],
 ];
 
-function ($items, $values)
-{
-ceil($values);
+function priceFormat($price) {
+     ceil($price);
 
-$values = 'price';
-    if ($values < 1000) {
-        $values = $values;
-    }
-    if ($values >= 1000){
-        number_format($values, 0," " , " ", + ₽);
+     if (1000 >= $price) {
+         return $price . " ₽";
+     }
 
-            Return $items;
-    }
-
+     return number_format($price, 0," ", " ") . " ₽";
 }
 ?>
 
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    
+
     <meta charset="UTF-8">
     <title>Главная</title>
     <link href="../css/normalize.min.css" rel="stylesheet">
@@ -140,7 +134,7 @@ $values = 'price';
                     <div class="lot__state">
                         <div class="lot__rate">
                             <span class="lot__amount">Стартовая цена</span>
-                            <span class="lot__cost"><?= $item['price']; ?></span>
+                            <span class="lot__cost"><?= priceFormat($item['price']); ?></span>
                         </div>
                         <div class="lot__timer timer">
                             12:23
