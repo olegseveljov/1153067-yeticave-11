@@ -48,13 +48,13 @@ $items = [
 ];
 
 function priceFormat($price) {
-     ceil($price);
+    $price = ceil($price);
 
-     if (1000 >= $price) {
+     if (1000 > $price) {
          return $price . " ₽";
      }
 
-     return number_format($price, 0," ", " ") . " ₽";
+     return number_format(ceil($price), 0," ", " ") . " ₽";
 }
 ?>
 
