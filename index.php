@@ -7,6 +7,7 @@ $categories = [
     "Доски и лыжи", "Крепления", "Ботинки", "Одежда", "Инструменты", "Разное"
 ];
 
+
 $items = [
     [
         'image' => 'img/lot-1.jpg',
@@ -46,11 +47,21 @@ $items = [
     ],
 ];
 
+function priceFormat($price) {
+    $price = ceil($price);
+
+     if (1000 > $price) {
+         return $price . " ₽";
+     }
+
+     return number_format(ceil($price), 0," ", " ") . " ₽";
+}
 ?>
 
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+
     <meta charset="UTF-8">
     <title>Главная</title>
     <link href="../css/normalize.min.css" rel="stylesheet">
@@ -124,7 +135,7 @@ $items = [
                     <div class="lot__state">
                         <div class="lot__rate">
                             <span class="lot__amount">Стартовая цена</span>
-                            <span class="lot__cost"><?= $item['price']; ?><b class="rub">р</b></span>
+                            <span class="lot__cost"><?= priceFormat($item['price']); ?></span>
                         </div>
                         <div class="lot__timer timer">
                             12:23
