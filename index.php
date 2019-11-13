@@ -2,6 +2,13 @@
 
 require_once __DIR__ . '/helpers.php';
 
+function esc($str){
+    $text = htmlspecialchars($str);
+    return $text;
+}
+
+$page_content = include_template('main.php' , ['categories' => $categories,]);
+
 $is_auth = rand(0, 1);
 
 $user_name = 'Oleg';
