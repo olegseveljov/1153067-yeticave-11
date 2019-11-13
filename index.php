@@ -2,20 +2,19 @@
 
 require_once __DIR__ . '/helpers.php';
 
-$categories = [];
+$layout_content = include_template('main.php' , [
+    'is_auth' => $is_auth,
+    'categories' => $categories,
+    'items' => $items
+]);
 
-$items = [];
 
-$page_content = include_template('inc/main.php' , ['$categories']);
+$content = include_template('main.php' , ['content' => 'title']);
 
-$content = include_template('templates/main.php' , ['content' => 'title']);
-
-$layout_content = include_template('templates/layout.php', [
+$layout_content = include_template('main/layout.php' , [
     'content' => $page_content,
     'categories' => $categories,
     'title' => 'YetiCave - Главная'
-
-
 ]);
 
 print($layout_content);

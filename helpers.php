@@ -1,4 +1,15 @@
 <?php
+
+function priceFormat($price) {
+    $price = ceil($price);
+
+    if (1000 > $price) {
+        return $price . " ₽";
+    }
+
+    return number_format(ceil($price), 0," ", " ") . " ₽";
+}
+
 /**
  * Проверяет переданную дату на соответствие формату 'ГГГГ-ММ-ДД'
  *
