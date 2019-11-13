@@ -1,6 +1,10 @@
 <?php
 
 require_once __DIR__ . '/helpers.php';
+require_once '/helpers.php';
+function ($price){
+    return $price;
+}
 
 $layout_content = include_template('main.php' , [
     'is_auth' => $is_auth,
