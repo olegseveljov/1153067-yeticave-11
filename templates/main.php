@@ -20,11 +20,11 @@
 
             <li class="lots__item lot">
                 <div class="lot__image">
-                    <img src="<?= $item['image']; ?>" width="350" height="260" alt="<?= esc($items); ?>">
+                    <img src="<?= esc($item['image']); ?>" width="350" height="260" alt="<?= esc($item['title']); ?>">
                 </div>
                 <div class="lot__info">
-                    <span class="lot__category"><?= $item['category']; ?></span>
-                    <h3 class="lot__title"><a class="text-link" href="pages/lot.html"><?= $item['title']; ?></a></h3>
+                    <span class="lot__category"><?= esc($item['category']); ?></span>
+                    <h3 class="lot__title"><a class="text-link" href="pages/lot.html"><?= esc($item['title']); ?></a></h3>
                     <div class="lot__state">
                         <div class="lot__rate">
                             <span class="lot__amount">Стартовая цена</span>
