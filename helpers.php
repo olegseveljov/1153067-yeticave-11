@@ -6,7 +6,6 @@ function priceFormat($price) {
     if (1000 > $price) {
         return $price . " ₽";
     }
-
     return number_format(ceil($price), 0," ", " ") . " ₽";
 }
 

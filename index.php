@@ -3,25 +3,6 @@
 date_default_timezone_set("Europe/Moscow");
 setlocale(LC_ALL, 'ru_RU');
 
-$curdate = date('Y.m.d');
-
-$ts = time(); //"C Начала 1970 года прошло $ts секунд, до текущей даты"
-
-$ts_lot = strtotime('expire_date');
-$secs_to_lot = $ts_lot - time();
-
-$hours = floor($secs_to_lot / 36000);
-$minutes = floor(($secs_to_lot % 360) / 60);
-
-print ("C Начала 1970 года прошло $ts секунд" );
-
-
-require_once __DIR__ . '/helpers.php';
-
-function esc($str){
-    return htmlspecialchars($str);
-};
-
 $categories = [
     'Доски и лыжи', 'Крепления', 'Ботинки', 'Одежда', 'Инструменты', 'Разное'
 ];
@@ -36,7 +17,7 @@ $items = [
         'title' => '2014 Rossignol District Snowboard',
         'category' => 'Доски и лыжи',
         'price' => 10999,
-        'expire_date' => '2019-12-11',
+        'expire_date' => '2019-11-16',
     ],
     [
         'image' => 'img/lot-2.jpg',
@@ -89,5 +70,23 @@ $layout_content = include_template('layout.php' , [
     'content' => $content
 ]);
 
-print($layout_content);
+function get_dt_range($endTime) { //Название функции и атрибут придумываем сами, чтоб подходил по логическому смыслу или указано в задании
+    $endTime = strtotime($endTime); // Форматируем дату в timestamp функцией strtotime
+    $currentTime = strtotime('now'); // Получем текущий timestams на даннай момент 'now' с  функцией strtotime
+    $diff = $endTime - $currentTime; // Получаем временной остаток будущее минус настоящее и записываем его в $diff автоматом
+    $hours = floor($diff / 3600); // Извлекаем часы делением на секунда и округляем при помощи 'floor'
+    $minutes = floor(($diff - $hours * 3600) / 60); // Извлекаем минуты делением на секунда и округляем при помощи 'floor'
 
+    return implode(':' , [                          // Возвращаем отформатированные часа и минуты в нужном формате
+        str_pad($hours, 2, '0', STR_PAD_LEFT),
+        $minutes
+    ]);
+}
+
+require_once __DIR__ . '/helpers.php';
+
+function esc($str){
+    return htmlspecialchars($str);
+};
+
+print($layout_content);
