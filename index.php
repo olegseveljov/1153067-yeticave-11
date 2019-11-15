@@ -1,5 +1,7 @@
 <?php
 
+require_once __DIR__ . '/helpers.php';
+
 date_default_timezone_set("Europe/Moscow");
 setlocale(LC_ALL, 'ru_RU');
 
@@ -82,8 +84,6 @@ function get_dt_range($endTime) { //Название функции и атри�
         $minutes
     ]);
 }
-
-require_once __DIR__ . '/helpers.php';
 
 function esc($str){
     return htmlspecialchars($str);
